@@ -126,13 +126,13 @@
     const vcard = [
       'BEGIN:VCARD',
       'VERSION:3.0',
-      'N:Ziadi;Mohammed;;;',
-      'FN:Mohammed Ziadi Barber',
-      'ORG:Mohammed Ziadi Barber',
+      'N:Ziadi;Simo;;;',
+      'FN:Simo Ziadi Barber',
+      'ORG:Simo Ziadi Barber',
       'TEL;TYPE=CELL:+393514961519',
-      'EMAIL:Mhamiedziadi1@gmail.com',
+      'EMAIL:Mhamedziadi1@gmail.com',
       'ADR;TYPE=WORK:;;Via Giuseppe Garibaldi 21;Varese;VA;21100;Italia',
-      'URL:https://www.instagram.com/dox.siimo/',
+      'URL:https://www.instagram.com/siimo_barber/',
       'NOTE:Precision. Style. Confidence.',
       'END:VCARD'
     ].join('\r\n');
