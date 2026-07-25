@@ -121,78 +121,21 @@
     }
   }, { once: true });
 
-const saveContact = $('#save-contact');
-
-saveContact?.addEventListener('click', async () => {
-  let photoLine = '';
-
-  try {
-    const response = await fetch('assets/mohammed-ziadi.png');
-
-    if (!response.ok) {
-      throw new Error('Profile image not found');
-    }
-
-    const imageBlob = await response.blob();
-
-    const imageBase64 = await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-
-      reader.onload = () => {
-        const dataUrl = String(reader.result);
-        resolve(dataUrl.split(',')[1]);
-      };
-
-      reader.onerror = reject;
-      reader.readAsDataURL(imageBlob);
-    });
-
-    const imageType = imageBlob.type.includes('png') ? 'PNG' : 'JPEG';
-
-    photoLine = `PHOTO;ENCODING=b;TYPE=${imageType}:${imageBase64}`;
-  } catch (error) {
-    console.warn('The profile image could not be added:', error);
-  }
-
-  const vcard = [
-    'BEGIN:VCARD',
-    'VERSION:3.0',
-    'N:Ziadi;Simo;;;',
-    'FN:Simo Ziadi Barber',
-    'ORG:Simo Ziadi Barber',
-    'TEL;TYPE=CELL:+393514961519',
-    'EMAIL:Mhamiedziadi1@gmail.com',
-    'ADR;TYPE=WORK:;;Via Giuseppe Garibaldi 21;Varese;VA;21100;Italia',
-    'URL:https://www.instagram.com/dox.siimo/',
-    'NOTE:Precision. Style. Confidence.',
-    photoLine,
-    'END:VCARD'
-  ]
-    .filter(Boolean)
-    .join('\r\n');
-
-  const blob = new Blob([vcard], {
-    type: 'text/vcard;charset=utf-8'
-  });
-
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement('a');
-
-  anchor.href = url;
-  anchor.download = 'Mohammed-Ziadi-Barber.vcf';
-
-  document.body.appendChild(anchor);
-  anchor.click();
-  anchor.remove();
-
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-
-  showToast(
-    photoLine
-      ? 'Contatto con foto pronto per essere salvato'
-      : 'Contatto salvato senza foto'
-  );
-});
+  const saveContact = $('#save-contact');
+  saveContact?.addEventListener('click', () => {
+    const vcard = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:Ziadi;Mohammed;;;',
+      'FN:Mohammed Ziadi Barber',
+      'ORG:Mohammed Ziadi Barber',
+      'TEL;TYPE=CELL:+393514961519',
+      'EMAIL:Mhamiedziadi1@gmail.com',
+      'ADR;TYPE=WORK:;;Via Giuseppe Garibaldi 21;Varese;VA;21100;Italia',
+      'URL:https://www.instagram.com/dox.siimo/',
+      'NOTE:Precision. Style. Confidence.',
+      'END:VCARD'
+    ].join('\r\n');
 
     const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
     const url = URL.createObjectURL(blob);
