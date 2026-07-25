@@ -127,7 +127,7 @@ saveContact?.addEventListener('click', async () => {
   let photoLine = '';
 
   try {
-    const response = await fetch('assetes/mohammed-ziadi.png');
+    const response = await fetch('assets/mohammed-ziadi.png');
 
     if (!response.ok) {
       throw new Error('Profile image not found');
