@@ -1,0 +1,17 @@
+{
+  "name": "Mohammed Ziadi Barber",
+  "short_name": "Ziadi Barber",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070708",
+  "theme_color": "#0b0b0c",
+  "description": "Precision. Style. Confidence.",
+  "icons": [
+    {
+      "src": "assets/mohammed-ziadi.png",
+      "sizes": "1023x1537",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

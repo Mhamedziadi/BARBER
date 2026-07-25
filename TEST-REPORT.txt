@@ -1,0 +1,24 @@
+Mohammed Ziadi Barber Website — v4 verification
+
+Automated browser checks completed on:
+- Mobile viewport: 390 × 844
+- Desktop viewport: 1024 × 900
+
+Result: 40/40 checks passed.
+
+Verified:
+- No JavaScript or console errors during loading and interaction
+- No horizontal overflow
+- Home, Services, Gallery, and Reviews navbar buttons
+- Repeated Home clicks return to the top
+- Correct active navbar state while scrolling
+- Booking modal open and close actions
+- Empty-form validation and all required fields
+- Date minimum/maximum limits and date value selection
+- Service/time selectors and notes counter
+- WhatsApp booking message generation
+- Gallery modal open and close actions
+- Navbar and form icon rendering
+- Contact destinations
+- Duplicate IDs, missing internal targets, missing SVG symbols, and missing local files
+- JavaScript, service-worker, and manifest syntax
